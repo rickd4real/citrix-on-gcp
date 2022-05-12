@@ -1,6 +1,6 @@
 ## NOTES FOR EXPERIMENTAL BRANCH
 - Service Management API must be enabled.
-- Assign Project Owner to Deplloyment Manager service account, see https://cloud.google.com/deployment-manager/docs/best-practices/#permissions
+- Assign Project Owner to Deployment Manager service account, see https://cloud.google.com/deployment-manager/docs/best-practices/#permissions
 
 - Create a JSON file containing Citrix Cloud secure client credentials and upload it to Google Cloud Storage, such as:
 ``` shell

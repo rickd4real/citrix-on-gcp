@@ -47,7 +47,7 @@ resources:
   properties:
     name: cc{{ loop.index }}{{ properties['suffix'] }}
     zone: {{ zone }}
-    machine-type: n1-standard-2
+    machine-type: e2-standard-2
     subnetwork: {{ properties['subnetwork'] }}
     service-account: {{ properties['service-account'] }}
     ssd: {{ properties['ssd'] }}

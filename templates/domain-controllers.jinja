@@ -39,7 +39,7 @@ resources:
   properties:
     name: dc1{{ properties['suffix'] }}
     zone: {{ properties['domain-controllers'][0]['zone'] }}
-    machine-type: n1-standard-2
+    machine-type: e2-standard-2
     subnetwork: {{ properties['subnetwork'] }}
     networkIP: {{ properties['domain-controllers'][0]['address'] }}
     service-account: {{ properties['service-account'] }}
@@ -104,7 +104,7 @@ resources:
   properties:
     name: dc2{{ properties['suffix'] }}
     zone: {{ properties['domain-controllers'][1]['zone'] }}
-    machine-type: n1-standard-2
+    machine-type: e2-standard-2
     subnetwork: {{ properties['subnetwork'] }}
     networkIP: {{ properties['domain-controllers'][1]['address'] }}
     service-account: {{ properties['service-account'] }}
@@ -130,7 +130,7 @@ resources:
 {% else %}
 {% endif %}
     - key: serial-port-logging-enable
-      value: true
+      value: "true"
     tags:
     - dc
     - dns

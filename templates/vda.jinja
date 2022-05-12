@@ -33,7 +33,7 @@ resources:
   properties:
     name: vda{{ loop.index }}{{ properties['suffix'] }}
     zone: {{ zone }}
-    machine-type: n1-standard-2
+    machine-type: n2d-standard-4
     subnetwork: {{ properties['subnetwork'] }}
     service-account: {{ properties['service-account'] }}
     ssd: {{ properties['ssd'] }}
