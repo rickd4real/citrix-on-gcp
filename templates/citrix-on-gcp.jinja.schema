@@ -78,7 +78,7 @@ properties:
   vda-download-url:
     type: string
     default: https://storage.googleapis.com/citrix-on-gcp-public/vda/VDAServerSetup_2009.exe
-    description: URL from which to doanload VDA installer
+    description: URL from which to download VDA installer. This works but it may be old.
   workers:
     type: integer
     default: 1
@@ -121,6 +121,7 @@ properties:
   citrix-creds:
     type: string
     description: GCS location of yaml citrix credentials
+    default: gs://yourbucketname-and-path/credentials.json
   suffix:
     type: string
     description: Disambiguation suffix for resources. "%deploy%" will use deployment name for suffix. Empty suffix is allowed.
@@ -141,5 +142,5 @@ properties:
   setup-citrix:
     type: boolean
     description: Flag to control whether Citrix instances (cc, vda) are fully configured or simply domain-joined..
-    default: true
+    default: false
 
