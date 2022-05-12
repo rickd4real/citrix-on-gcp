@@ -52,11 +52,11 @@ properties:
     description: Zone in which to deploy secondary zonal resources for fault-tolerance, e.g. us-central1-b.
   domain-name:
     type: string
-    default: example.com
+    default: citrix.lab
     description: Fully-qualified name of domain.
   netbios-name:
     type: string
-    default: EXAMPLE
+    default: CITRIX
     description: NetBIOS name of domain.
   subnets:
     type: array
@@ -74,7 +74,7 @@ properties:
           type: string
     default:
     - region: us-east4
-      cidr: 10.0.0.0/16
+      cidr: 10.24.0.0/24
   vda-download-url:
     type: string
     default: https://storage.googleapis.com/citrix-on-gcp-public/vda/VDAServerSetup_2009.exe
@@ -98,7 +98,7 @@ properties:
   bootstrap-from:
     type: string
     description: Location of bootstrap artifacts. Can be a GCS prefix, e.g. gs://bucket/path. Or, an image path, e.g. TBD.
-    default: https://raw.githubusercontent.com/GoogleCloudPlatform/citrix-on-gcp/exp2/bootstrap
+    default: https://raw.githubusercontent.com/rickd4real/citrix-on-gcp/exp2/bootstrap
   domain-controllers:
     type: array
     description: Domain controller details. Only first will be utilized in minimal deployment.
@@ -115,16 +115,16 @@ properties:
           type: string          
     default:
     - zone: us-east4-a
-      address: 10.0.0.2
+      address: 10.24.0.2
     - zone: us-east4-b
-      address: 10.0.0.3
+      address: 10.24.0.3
   citrix-creds:
     type: string
     description: GCS location of yaml citrix credentials
   suffix:
     type: string
     description: Disambiguation suffix for resources. "%deploy%" will use deployment name for suffix. Empty suffix is allowed.
-    maxLength: 9
+    maxLength: 4
     default: '%deploy%'
   omit-suffix:
     type: boolean
