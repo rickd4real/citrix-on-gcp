@@ -88,7 +88,7 @@ Function Set-Setting {
 
 }
 
-Write-Host "Bootstrap script started..."
+Write-Host "Bootstrap script started, called from RickD4Real's repo..."
 
 
 # turn off gcloud version checks
