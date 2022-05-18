@@ -30,7 +30,7 @@ Function New-RandomString {
 Function New-RandomPassword() {
 	Param(
 		[int] $Length = 24,
-		[char[]] $AllowedChars = $Null
+		[char[]] $AllowedChars = "abcdABCD"
 	)
 	Return New-RandomString -Length $Length -AllowedChars $AllowedChars | ConvertTo-SecureString -AsPlainText -Force
 }
