@@ -30,7 +30,7 @@ Function New-RandomString {
 Function New-RandomPassword() {
 	Param(
 		[int] $Length = 24,
-		[char[]] $AllowedChars = "abcdABCD"
+		[char[]] $AllowedChars = "^$*.[]{}()?-!@#%,:;|_~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 	)
 	Return New-RandomString -Length $Length -AllowedChars $AllowedChars | ConvertTo-SecureString -AsPlainText -Force
 }
@@ -88,7 +88,7 @@ Function Set-Setting {
 
 }
 
-Write-Host "Bootstrap script started, called from RickD4Real's repo..."
+Write-Host "Bootstrap script primary-domain-controller-step-1.ps1 started"
 
 
 # turn off gcloud version checks
